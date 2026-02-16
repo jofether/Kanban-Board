@@ -55,6 +55,7 @@ body {
   }
 }
 
-.drag-over {
+/* [BUG - TYPO] CSS selector has typo, breaking hover effect. [FIX] Change .drg-over to .drag-over */
+.drg-over {
   animation: pulse-subtle 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
