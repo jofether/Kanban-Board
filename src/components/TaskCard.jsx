@@ -53,14 +53,12 @@ function TaskCard({ task, columnId, onDragStart, onDeleteTask }) {
   const isOverdue = new Date(task.dueDate) < new Date() && formatDate(task.dueDate) !== 'Today';
 
   return (
-    // [BUG - SPACING] Border radius is noticeably too small, looks inconsistent. [FIX] Change rounded-none to rounded-lg
     <div
       draggable
       onDragStart={(e) => onDragStart(e, task, columnId)}
       className="bg-gradient-to-br from-slate-600 to-slate-700 p-4 rounded-none shadow-md border border-slate-500 cursor-grab hover:shadow-lg active:cursor-grabbing transition-all duration-200 hover:from-slate-500 hover:to-slate-600 hover:-translate-y-1 group"
     >
       {/* Title */}
-      {/* [BUG - COLOR] Title text is too faded against dark card. [FIX] Change text-slate-500 to text-white */}
       <div className="flex items-start justify-between mb-3 gap-2">
         <p className="text-slate-600 font-semibold text-sm flex-1 line-clamp-2 group-hover:text-blue-200">
           {task.title}
@@ -92,7 +90,6 @@ function TaskCard({ task, columnId, onDragStart, onDeleteTask }) {
         >
           {getInitials(task.assignee)}
         </div>
-        {/* [BUG - SPACING] Date badge has unbalanced padding making layout look awkward. [FIX] Change px-4 py-2 to px-2.5 py-0.5 */}
         <span
           className={`text-xs font-medium ${
             isOverdue

@@ -116,9 +116,7 @@ function App() {
       </header>
 
       {/* Main Board */}
-      {/* [BUG - SPACING] Excessive padding squeezes content significantly. [FIX] Change p-12 to p-6 */}
       <main className="flex-1 overflow-x-auto overflow-y-hidden p-12">
-        {/* [BUG - LAYOUT] Gap between columns is too tight, creates visual cramping. [FIX] Change gap-1 to gap-6 */}
         <div className="flex h-full gap-1 min-w-max">
           {columns.map((column) => (
             <Column
